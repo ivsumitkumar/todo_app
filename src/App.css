@@ -1,66 +1,106 @@
+body {
+  background: rgb(247, 245, 244);
+}
+
+.container {
+  box-shadow: 10px 10px 5px rgb(243, 86, 86);
+}
+
 .App {
-    text-align: center;
-    padding: 20px;
-  }
-  
-  .todo-input {
-    margin-bottom: 10px;
-  }
-  
-  .todo-list {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .todo-card {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    background-color: #fff;
-    transition: background-color 0.3s ease;
-  }
-  
-  .todo-card:hover {
-    background-color: #f2f2f2;
-  }
-  
-  .todo-card.completed {
-    text-decoration: line-through;
-    background-color: #f9f9f9;
-  }
-  
-  .todo-card p {
-    flex-grow: 1;
-    margin-right: 10px;
-  }
-  
-  .reset-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+.todo-input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.todo-card {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  background-color: rgb(12, 226, 190);
+  transition: background-color 0.3s ease;
+  width: 50%;
+
+}
+
+.todo-card:hover {
+  background-color: #f2f2f2;
+  box-shadow: 5px 5px 5px rgb(243, 86, 86);
+
+}
+
+.todo-card.completed {
+  text-decoration: line-through;
+  background-color: #3ed059;
+}
+
+.todo-card p {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.reset-button {
+  position: absolute;
+
+  padding: 5px 10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 30px;
+}
+
+.reset-button:hover {
+  background-color: #d32f2f;
+}
+
+.reset-button:focus {
+  outline: none;
+}
+
+.reset-button:active {
+  transform: translateY(1px);
+}
+
+hr {
+  display: block;
+  margin: 50px 0 -15px;
+  width: 100%;
+  height: 1px;
+  border: 0;
+  background-color: black;
+}
+
+h2{
+    display: inline-block;
+    position: relative;
+    margin:auto;
     padding: 5px 10px;
-    background-color: #f44336;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .reset-button:hover {
-    background-color: #d32f2f;
-  }
-  
-  .reset-button:focus {
-    outline: none;
-  }
-  
-  .reset-button:active {
-    transform: translateY(1px);
-  }
-  
+    border: 1px solid red;
+    box-shadow: inset 0 0 0 1px red;
+    /* transform: translateX(-50%); */
+    color: red;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: black;
+}

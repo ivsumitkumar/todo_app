@@ -14,7 +14,7 @@ function App() {
 
   // Update local storage whenever TODOs change
   useEffect(() => {
-    if (todos.length){
+    if (todos.length) {
       localStorage.setItem('todos', JSON.stringify(todos));
     }
   }, [todos]);
@@ -55,7 +55,7 @@ function App() {
   };
 
   const resetTodos = () => {
-    localStorage.setItem('todos',JSON.stringify([]))
+    localStorage.setItem('todos', JSON.stringify([]))
     setTodos([]);
   };
 
@@ -67,35 +67,45 @@ function App() {
   });
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>TODO App</h1>
-        <div className="todo-input">
-          <input
-            type="text"
-            placeholder="Add a todo"
-            value={inputValue}
-            onChange={handleInputChange}
-            onKeyPress={handleKeyPress}
-          />
-        </div>
-        <div className="todo-list">
-          {sortedTodos.map((todo) => (
-            <div
-              key={todo.id}
-              className={`todo-card ${todo.completed ? 'completed' : ''}`}
-              onClick={() => toggleTodo(todo.id)}
-            >
-              <p>
-                {todo.text}
-              </p>
-            </div>
-          ))}
-        </div>
-        <button className="reset-button" onClick={resetTodos}>
-          Reset
-        </button>
-      </header>
+    <div className='container-sm bg-warning rounded-5 container' >
+      <div className="App">
+        <header className="App-header">
+          <h1>TODO APP</h1>
+          
+          
+          <div className="todo-input">
+            <input
+            className='rounded-4'
+              type="text"
+              placeholder="Add a todo"
+              value={inputValue}
+              onChange={handleInputChange}
+              onKeyPress={handleKeyPress}
+
+              style={{width:"40%",}}
+            />
+            <button className="btn btn-danger  reset-button" onClick={resetTodos}>
+            Reset
+          </button>
+          <hr/>
+          <h2>LIST</h2>
+          </div>
+          <div className="todo-list">
+            {sortedTodos.map((todo) => (
+              <div
+                key={todo.id}
+                className={`todo-card ${todo.completed ? 'completed' : ''} rounded-5`}
+                onClick={() => toggleTodo(todo.id)}
+              >
+                <p>
+                  {todo.text}
+                </p>
+              </div>
+            ))}
+          </div>
+          
+        </header>
+      </div>
     </div>
   );
 }
