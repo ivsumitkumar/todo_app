@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Overview
+The TODO App is a simple offline task management application built using React JS. It allows users to create, manage, and mark tasks as completed. The app provides a userfriendly interface to add, view, and organize tasks based on their status.
 
 ## Available Scripts
 
