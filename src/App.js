@@ -86,7 +86,9 @@ function App() {
               className={`todo-card ${todo.completed ? 'completed' : ''}`}
               onClick={() => toggleTodo(todo.id)}
             >
-              {todo.text}
+              <p>
+                {todo.text}
+              </p>
             </div>
           ))}
         </div>
